@@ -7,8 +7,10 @@ import uuid
 class Order(models.Model):
     id = models.UUIDField(primary_key=True, auto_created=True, default=uuid.uuid4, editable=False)
     order_no = models.CharField(max_length=64)
-    create_time = models.DateTimeField(auto_now=True, auto_now_add=True)
+    create_time = models.DateTimeField(auto_now_add=True)
     create_by = models.CharField(max_length=64)
+    update_time = models.DateTimeField(auto_now=True)
+    update_by = models.CharField(max_length=64)
 
     def __str__(self):
         return self.order_no

@@ -6,5 +6,7 @@ from oms_app.user.models import *
 from oms_app.order.models import *
 
 # Register your models here.
-admin.site.register(user)
-admin.site.register(product)
+admin.site.register(User)
+admin.site.register(Order)
+admin.site.register(OrderItem)
+admin.site.register(Product)
